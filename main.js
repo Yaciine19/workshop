@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       const response = await axios.post(
-        'http://127.0.0.1:3000/register',
+        'https://backend-ny8p.onrender.com/register',
         JSON.stringify(data),
         {
           headers: { 'Content-Type': 'application/json' },
