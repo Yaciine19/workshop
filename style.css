@@ -820,7 +820,7 @@ label span {
 }
 
 /* ============ for small devices =============== */
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 480px) {
     .container {
         margin-inline: 1rem;
     }
@@ -838,7 +838,7 @@ label span {
     }
 
     .activities_list {
-        grid-template-columns: 100px;
+        grid-template-columns: 1fr;
     }
 
     .activities_list_item {
@@ -871,24 +871,6 @@ label span {
         border-radius: 0;
     }
 }
-
-@media screen and (min-width: 340px) {
-    .activities_list {
-        grid-template-columns: 1fr;
-    }
-
-    .activities_list_item {
-        padding: 1.5rem 1.7rem;
-    }
-
-    .activities_list_item i {
-        font-size: 2rem;
-    }
-
-    .activities_list_item span {
-        font-size: 1rem;
-    }
- }
 
 /* ============ for large devices =============== */
 
