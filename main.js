@@ -83,39 +83,3 @@ AOS.init({
   offset: 100,
   easing: "ease",
 });
-
-// =============== REGISTRATION ====================
-
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("form");
-  const message = document.getElementById("message");
-
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
-
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
-
-    try {
-      const response = await axios.post(
-        'https://backend-ny8p.onrender.com/register',
-        JSON.stringify(data),
-        {
-          headers: { 'Content-Type': 'application/json' },
-        }
-      );
-
-      if (response.status === 200) {
-        message.textContent = response.data.message;
-        message.style.color = "green";
-        form.reset();
-      } else {
-        message.textContent = `${response.data.error}`;
-        message.style.color = "red";
-      }
-    } catch (error) {
-      message.textContent = `${error.response?.data?.error || error.message}`;
-      message.style.color = "red";
-    }
-  });
-});
