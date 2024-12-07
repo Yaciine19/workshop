@@ -38,35 +38,6 @@ const bgHeader = () => {
 window.addEventListener("scroll", bgHeader);
 bgHeader();
 
-// ============= DEADLINE =================
-const deadline = new Date("2024-12-07T18:00:00").getTime();
-
-var day = document.getElementById("day");
-var hour = document.getElementById("hour");
-var min = document.getElementById("min");
-var sec = document.getElementById("sec");
-
-const timerInterval = setInterval(() => {
-  const now = new Date().getTime();
-  const timeLeft = deadline - now;
-
-  if (timeLeft >= 0) {
-    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    const hours = Math.floor(
-      (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
-    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-    day.innerHTML = (days < 10 ? "0" : "") + days;
-    hour.innerHTML = (hours < 10 ? "0" : "") + hours;
-    min.innerHTML = (minutes < 10 ? "0" : "") + minutes;
-    sec.innerHTML = (seconds < 10 ? "0" : "") + seconds;
-  } else {
-    clearInterval(timerInterval);
-  }
-}, 1000);
-
 // =========== SHOW SCROLL UP ===============
 const scrollUp = () => {
   const scrollup = document.getElementById("scroll-up");
