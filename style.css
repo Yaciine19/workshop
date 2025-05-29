@@ -396,8 +396,8 @@ img {
 }
 
 .activities_list_item:hover {
-    transform: scale(1.1);
     box-shadow: 0 0 10px #2949a7;
+    transform: scale(1.1);
 }
 
 .activities_list_item i {
@@ -820,7 +820,7 @@ label span {
 }
 
 /* ============ for small devices =============== */
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 480px) {
     .container {
         margin-inline: 1rem;
     }
