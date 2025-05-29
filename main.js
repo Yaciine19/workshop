@@ -38,7 +38,6 @@ const bgHeader = () => {
 window.addEventListener("scroll", bgHeader);
 bgHeader();
 
-<<<<<<< HEAD
 // ============= DEADLINE =================
 const deadline = new Date("2024-12-07T18:00:00").getTime();
 
@@ -68,8 +67,6 @@ const timerInterval = setInterval(() => {
   }
 }, 1000);
 
-=======
->>>>>>> ac7cead25f01d1d53b33bb40b569237c26c4a898
 // =========== SHOW SCROLL UP ===============
 const scrollUp = () => {
   const scrollup = document.getElementById("scroll-up");
@@ -86,7 +83,6 @@ AOS.init({
   offset: 100,
   easing: "ease",
 });
-<<<<<<< HEAD
 
 // =============== REGISTRATION ====================
 
@@ -123,5 +119,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-=======
->>>>>>> ac7cead25f01d1d53b33bb40b569237c26c4a898
